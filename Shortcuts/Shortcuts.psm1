@@ -1,4 +1,4 @@
-Function Move-ToShortcut {
+function Move-ToShortcut {
 
     param (
         [string] $Nickname
@@ -10,27 +10,19 @@ Function Move-ToShortcut {
         $file_path = $dir.ToString() + '\Shortcuts\data.json'
 
         if(Test-Path $file_path) {
-            Write-Host "Found the file!"
-
             $json_data = Get-Content $file_path | ConvertFrom-Json
-
-            Write-Host $json_data[0]
 
             foreach($data in $json_data) {
                 if ($Nickname -eq $data.nickname) {
                     Set-Location -Path $data.path
+                    
+                    return
                 }
             }
         }
-        else {
-            Write-Host "Didn't find the file"
-        }
-
-        Write-Host "Looking in " -NoNewline
-        Write-Host $file_path
     }
 }
 
-New-Alias -Name msc -Value Shortcuts
+New-Alias -Name msc -Value Move-ToShortcut
 
 Export-ModuleMember -Function Move-ToShortcut -Alias msc
