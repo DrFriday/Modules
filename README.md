@@ -22,7 +22,7 @@ The folder and file name should be the same. E.x.:
 
 Check to see that the modules is there,
 
-    Get-Module -listavailable
+    Get-Module -ListAvailable
 
 and import it.
 
