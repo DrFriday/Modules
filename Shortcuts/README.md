@@ -24,7 +24,7 @@ M-Shortcuts will have the alias 'msc'
 
 To run this module, run the following
 
-    msc -Path <nickname>
+    msc -Nickname <nickname>
 
 replacing nickname with the nickname you assigned earlier.
 
