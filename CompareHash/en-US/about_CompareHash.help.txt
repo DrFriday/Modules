@@ -1,0 +1,17 @@
+TOPIC
+    about_CompareHash
+
+SHORT DESCRIPTION
+    Computes a file hash, and compares it to the given hash. Outputs if they are the same or not.
+
+LONG DESCRIPTION
+    A detailed, full description of the subject or purpose of the module.
+
+EXAMPLES
+    Compare-Hash -file ./file.txt -hash 1234...
+
+KEYWORDS
+    Hash
+
+SEE ALSO
+    Get-Hash
